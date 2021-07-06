@@ -1,0 +1,22 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace Leetcode._#ID#
+{
+    public class LeetCode_#ID# : MonoBehaviour
+    {
+        // Start is called before the first frame update
+        void Start()
+        {
+            Solution solution = new Solution();
+        }
+
+
+    }
+
+    public class Solution
+    {
+
+    }
+}

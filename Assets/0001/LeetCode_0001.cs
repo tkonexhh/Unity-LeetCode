@@ -2,34 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LeetCode_0001 : MonoBehaviour
+namespace Leetcode._0001
 {
-    // Start is called before the first frame update
-    void Start()
+    public class LeetCode_0001 : MonoBehaviour
     {
-        Solution solution = new Solution();
-        int[] num = solution.TwoSum(new int[] { 3, 2, 4 }, 6);
-        Debug.LogError(num[0] + "--" + num[1]);
-    }
-
-}
-
-public class Solution
-{
-    public int[] TwoSum(int[] nums, int target)
-    {
-
-        for (int i = 0; i < nums.Length; i++)
+        // Start is called before the first frame update
+        void Start()
         {
-            for (int j = i + 1; j < nums.Length; j++)
-            {
-                if (nums[i] + nums[j] == target)
-                {
-                    return new int[] { i, j };
-                }
-            }
+            Solution solution = new Solution();
+            int[] num = solution.TwoSum(new int[] { 3, 2, 4 }, 6);
+            Debug.LogError(num[0] + "--" + num[1]);
         }
 
-        return null;
+    }
+
+    public class Solution
+    {
+        public int[] TwoSum(int[] nums, int target)
+        {
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                for (int j = i + 1; j < nums.Length; j++)
+                {
+                    if (nums[i] + nums[j] == target)
+                    {
+                        return new int[] { i, j };
+                    }
+                }
+            }
+
+            return null;
+        }
     }
 }
